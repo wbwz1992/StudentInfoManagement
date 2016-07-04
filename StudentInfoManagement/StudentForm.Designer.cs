@@ -30,18 +30,31 @@
         {
             this.returnButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.sstudentIdText = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.studentNameText = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.searchButton = new System.Windows.Forms.Button();
+            this.majorBox = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.classBox = new System.Windows.Forms.ComboBox();
+            this.searchButton = new System.Windows.Forms.Button();
             this.StudentListGridView = new System.Windows.Forms.DataGridView();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.sexBox = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.nationalityText = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.politicalStatusText = new System.Windows.Forms.TextBox();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Sex = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nationality = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PoliticalStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Major = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Class = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.StudentListGridView)).BeginInit();
             this.SuspendLayout();
@@ -65,12 +78,12 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "学号";
             // 
-            // textBox1
+            // sstudentIdText
             // 
-            this.textBox1.Location = new System.Drawing.Point(38, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 21);
-            this.textBox1.TabIndex = 3;
+            this.sstudentIdText.Location = new System.Drawing.Point(38, 3);
+            this.sstudentIdText.Name = "sstudentIdText";
+            this.sstudentIdText.Size = new System.Drawing.Size(100, 21);
+            this.sstudentIdText.TabIndex = 3;
             // 
             // label2
             // 
@@ -91,12 +104,12 @@
             this.label3.Text = "专业";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // textBox2
+            // studentNameText
             // 
-            this.textBox2.Location = new System.Drawing.Point(179, 3);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 21);
-            this.textBox2.TabIndex = 6;
+            this.studentNameText.Location = new System.Drawing.Point(179, 3);
+            this.studentNameText.Name = "studentNameText";
+            this.studentNameText.Size = new System.Drawing.Size(100, 21);
+            this.studentNameText.TabIndex = 6;
             // 
             // flowLayoutPanel1
             // 
@@ -104,39 +117,36 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flowLayoutPanel1.Controls.Add(this.label1);
-            this.flowLayoutPanel1.Controls.Add(this.textBox1);
+            this.flowLayoutPanel1.Controls.Add(this.sstudentIdText);
             this.flowLayoutPanel1.Controls.Add(this.label2);
-            this.flowLayoutPanel1.Controls.Add(this.textBox2);
+            this.flowLayoutPanel1.Controls.Add(this.studentNameText);
             this.flowLayoutPanel1.Controls.Add(this.label3);
-            this.flowLayoutPanel1.Controls.Add(this.comboBox1);
+            this.flowLayoutPanel1.Controls.Add(this.majorBox);
             this.flowLayoutPanel1.Controls.Add(this.label4);
-            this.flowLayoutPanel1.Controls.Add(this.comboBox2);
+            this.flowLayoutPanel1.Controls.Add(this.classBox);
+            this.flowLayoutPanel1.Controls.Add(this.label5);
+            this.flowLayoutPanel1.Controls.Add(this.sexBox);
+            this.flowLayoutPanel1.Controls.Add(this.label6);
+            this.flowLayoutPanel1.Controls.Add(this.nationalityText);
+            this.flowLayoutPanel1.Controls.Add(this.label7);
+            this.flowLayoutPanel1.Controls.Add(this.politicalStatusText);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(155, 12);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(702, 31);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(628, 66);
             this.flowLayoutPanel1.TabIndex = 7;
             // 
-            // comboBox1
+            // majorBox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.majorBox.FormattingEnabled = true;
+            this.majorBox.Items.AddRange(new object[] {
             "信息与计算科学",
             "数学与应用数学",
             "应用物理"});
-            this.comboBox1.Location = new System.Drawing.Point(320, 3);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 20);
-            this.comboBox1.TabIndex = 7;
-            // 
-            // searchButton
-            // 
-            this.searchButton.Location = new System.Drawing.Point(155, 49);
-            this.searchButton.Name = "searchButton";
-            this.searchButton.Size = new System.Drawing.Size(75, 23);
-            this.searchButton.TabIndex = 8;
-            this.searchButton.Text = "搜索";
-            this.searchButton.UseVisualStyleBackColor = true;
-            this.searchButton.Click += new System.EventHandler(this.button2_Click);
+            this.majorBox.Location = new System.Drawing.Point(320, 3);
+            this.majorBox.Name = "majorBox";
+            this.majorBox.Size = new System.Drawing.Size(121, 20);
+            this.majorBox.TabIndex = 7;
+            this.majorBox.SelectedIndexChanged += new System.EventHandler(this.majorBox_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -147,17 +157,37 @@
             this.label4.TabIndex = 9;
             this.label4.Text = "班级";
             // 
-            // comboBox2
+            // classBox
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(482, 3);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 20);
-            this.comboBox2.TabIndex = 10;
+            this.classBox.FormattingEnabled = true;
+            this.classBox.Location = new System.Drawing.Point(482, 3);
+            this.classBox.Name = "classBox";
+            this.classBox.Size = new System.Drawing.Size(121, 20);
+            this.classBox.TabIndex = 10;
+            // 
+            // searchButton
+            // 
+            this.searchButton.Location = new System.Drawing.Point(821, 15);
+            this.searchButton.Name = "searchButton";
+            this.searchButton.Size = new System.Drawing.Size(75, 23);
+            this.searchButton.TabIndex = 8;
+            this.searchButton.Text = "搜索";
+            this.searchButton.UseVisualStyleBackColor = true;
+            this.searchButton.Click += new System.EventHandler(this.button2_Click);
             // 
             // StudentListGridView
             // 
+            this.StudentListGridView.AllowUserToAddRows = false;
+            this.StudentListGridView.AllowUserToDeleteRows = false;
             this.StudentListGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.StudentListGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id,
+            this.Name,
+            this.Sex,
+            this.Nationality,
+            this.PoliticalStatus,
+            this.Major,
+            this.Class});
             this.StudentListGridView.Location = new System.Drawing.Point(13, 84);
             this.StudentListGridView.Name = "StudentListGridView";
             this.StudentListGridView.RowTemplate.Height = 23;
@@ -182,18 +212,106 @@
             this.button4.Text = "导出";
             this.button4.UseVisualStyleBackColor = true;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(3, 27);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(29, 12);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "性别";
+            // 
+            // sexBox
+            // 
+            this.sexBox.FormattingEnabled = true;
+            this.sexBox.Items.AddRange(new object[] {
+            "男",
+            "女"});
+            this.sexBox.Location = new System.Drawing.Point(38, 30);
+            this.sexBox.Name = "sexBox";
+            this.sexBox.Size = new System.Drawing.Size(100, 20);
+            this.sexBox.TabIndex = 12;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(144, 27);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(29, 12);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "民族";
+            // 
+            // nationalityText
+            // 
+            this.nationalityText.Location = new System.Drawing.Point(179, 30);
+            this.nationalityText.Name = "nationalityText";
+            this.nationalityText.Size = new System.Drawing.Size(100, 21);
+            this.nationalityText.TabIndex = 14;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(285, 27);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(53, 12);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "政治面貌";
+            // 
+            // politicalStatusText
+            // 
+            this.politicalStatusText.Location = new System.Drawing.Point(344, 30);
+            this.politicalStatusText.Name = "politicalStatusText";
+            this.politicalStatusText.Size = new System.Drawing.Size(100, 21);
+            this.politicalStatusText.TabIndex = 16;
+            // 
+            // Id
+            // 
+            this.Id.HeaderText = "学号";
+            this.Id.Name = "Id";
+            // 
+            // Name
+            // 
+            this.Name.HeaderText = "姓名";
+            this.Name.Name = "Name";
+            // 
+            // Sex
+            // 
+            this.Sex.HeaderText = "性别";
+            this.Sex.Name = "Sex";
+            // 
+            // Nationality
+            // 
+            this.Nationality.HeaderText = "民族";
+            this.Nationality.Name = "Nationality";
+            // 
+            // PoliticalStatus
+            // 
+            this.PoliticalStatus.HeaderText = "政治面貌";
+            this.PoliticalStatus.Name = "PoliticalStatus";
+            // 
+            // Major
+            // 
+            this.Major.HeaderText = "专业名称";
+            this.Major.Name = "Major";
+            // 
+            // Class
+            // 
+            this.Class.HeaderText = "行政班";
+            this.Class.Name = "Class";
+            // 
             // StudentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(930, 502);
+            this.Controls.Add(this.searchButton);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.StudentListGridView);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.returnButton);
-            this.Controls.Add(this.searchButton);
             this.Name = "StudentForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StudentForm";
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
@@ -205,17 +323,30 @@
         #endregion
         private System.Windows.Forms.Button returnButton;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox sstudentIdText;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox studentNameText;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox majorBox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button searchButton;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox classBox;
         private System.Windows.Forms.DataGridView StudentListGridView;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox sexBox;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox nationalityText;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox politicalStatusText;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Sex;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nationality;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PoliticalStatus;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Major;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Class;
     }
 }

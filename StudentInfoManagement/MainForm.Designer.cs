@@ -100,6 +100,7 @@
             this.Controls.Add(this.flowLayoutPanel2);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "主界面";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.flowLayoutPanel2.ResumeLayout(false);
