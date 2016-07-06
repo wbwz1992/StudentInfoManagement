@@ -38,18 +38,18 @@
             this.majorBox = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.classBox = new System.Windows.Forms.ComboBox();
-            this.searchButton = new System.Windows.Forms.Button();
-            this.StudentListGridView = new System.Windows.Forms.DataGridView();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.sexBox = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.nationalityText = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.politicalStatusText = new System.Windows.Forms.TextBox();
+            this.searchButton = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.StudentListGridView = new System.Windows.Forms.DataGridView();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StudentName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Sex = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nationality = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PoliticalStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -165,53 +165,6 @@
             this.classBox.Size = new System.Drawing.Size(121, 20);
             this.classBox.TabIndex = 10;
             // 
-            // searchButton
-            // 
-            this.searchButton.Location = new System.Drawing.Point(821, 15);
-            this.searchButton.Name = "searchButton";
-            this.searchButton.Size = new System.Drawing.Size(75, 23);
-            this.searchButton.TabIndex = 8;
-            this.searchButton.Text = "搜索";
-            this.searchButton.UseVisualStyleBackColor = true;
-            this.searchButton.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // StudentListGridView
-            // 
-            this.StudentListGridView.AllowUserToAddRows = false;
-            this.StudentListGridView.AllowUserToDeleteRows = false;
-            this.StudentListGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.StudentListGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Id,
-            this.Name,
-            this.Sex,
-            this.Nationality,
-            this.PoliticalStatus,
-            this.Major,
-            this.Class});
-            this.StudentListGridView.Location = new System.Drawing.Point(13, 84);
-            this.StudentListGridView.Name = "StudentListGridView";
-            this.StudentListGridView.RowTemplate.Height = 23;
-            this.StudentListGridView.Size = new System.Drawing.Size(905, 374);
-            this.StudentListGridView.TabIndex = 9;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(708, 467);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 10;
-            this.button3.Text = "导入";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(806, 467);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 11;
-            this.button4.Text = "导出";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -264,15 +217,63 @@
             this.politicalStatusText.Size = new System.Drawing.Size(100, 21);
             this.politicalStatusText.TabIndex = 16;
             // 
+            // searchButton
+            // 
+            this.searchButton.Location = new System.Drawing.Point(821, 15);
+            this.searchButton.Name = "searchButton";
+            this.searchButton.Size = new System.Drawing.Size(75, 23);
+            this.searchButton.TabIndex = 8;
+            this.searchButton.Text = "搜索";
+            this.searchButton.UseVisualStyleBackColor = true;
+            this.searchButton.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(708, 467);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 10;
+            this.button3.Text = "导入";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(806, 467);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 11;
+            this.button4.Text = "导出";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // StudentListGridView
+            // 
+            this.StudentListGridView.AllowUserToAddRows = false;
+            this.StudentListGridView.AllowUserToDeleteRows = false;
+            this.StudentListGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.StudentListGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id,
+            this.StudentName,
+            this.Sex,
+            this.Nationality,
+            this.PoliticalStatus,
+            this.Major,
+            this.Class});
+            this.StudentListGridView.Location = new System.Drawing.Point(13, 84);
+            this.StudentListGridView.Name = "StudentListGridView";
+            this.StudentListGridView.RowTemplate.Height = 23;
+            this.StudentListGridView.Size = new System.Drawing.Size(905, 374);
+            this.StudentListGridView.TabIndex = 9;
+            this.StudentListGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.StudentListGridView_CellContentClick);
+            // 
             // Id
             // 
             this.Id.HeaderText = "学号";
             this.Id.Name = "Id";
             // 
-            // Name
+            // StudentName
             // 
-            this.Name.HeaderText = "姓名";
-            this.Name.Name = "Name";
+            this.StudentName.HeaderText = "姓名";
+            this.StudentName.Name = "StudentName";
             // 
             // Sex
             // 
@@ -332,7 +333,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button searchButton;
         private System.Windows.Forms.ComboBox classBox;
-        private System.Windows.Forms.DataGridView StudentListGridView;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label5;
@@ -341,8 +341,9 @@
         private System.Windows.Forms.TextBox nationalityText;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox politicalStatusText;
+        private System.Windows.Forms.DataGridView StudentListGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn StudentName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Sex;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nationality;
         private System.Windows.Forms.DataGridViewTextBoxColumn PoliticalStatus;
