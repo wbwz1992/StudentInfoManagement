@@ -14,7 +14,7 @@ namespace StudentInfoManagement
 {
     public partial class StudentForm : Form
     {
-        
+        SQLiteHelper helper = new SQLiteHelper("D:\Program Files (x86)\SQLiteStudio\StudentInfoManagementDB.db", null);
         public StudentForm()
         {
             InitializeComponent();
@@ -40,7 +40,7 @@ namespace StudentInfoManagement
         private void majorBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             string[] majors = {"信息与计算科学", "数学与应用数学", "应用物理" };           
-            string connectionString = "Data Source=DESKTOP-NOTL3M1;Initial Catalog=StudentManagementDB;Integrated Security=True";
+            /*string connectionString = "Data Source=DESKTOP-NOTL3M1;Initial Catalog=StudentManagementDB;Integrated Security=True";
             string sql = "SELECT class_num FROM Class WHERE class_major = '" + majors[majorBox.SelectedIndex] + "'";
             DataSet dateset = SqlHelper.ExecuteDataset(connectionString, CommandType.Text, sql);
             int n = dateset.Tables[0].Rows.Count;
@@ -53,7 +53,9 @@ namespace StudentInfoManagement
                     classes[i] = dateset.Tables[0].Rows[i][0].ToString().Trim();
                 }
                 classBox.Items.AddRange(classes);
-            }
+            }*/
+
+
         }
 
         private void StudentListGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
